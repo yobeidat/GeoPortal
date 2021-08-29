@@ -1,0 +1,93 @@
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <h1 class="h3 mb-3">Users</h1>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-outline-primary" data-toggle="modal"
+                            data-target="#AddUserModal">Add User</button>
+                    </div>
+                    <table id="usersTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:40%;">Username</th>
+                                <th style="width:25%">Full Name</th>
+                                <th class="d-none d-md-table-cell" style="width:25%">Role</th>
+                                <th class="d-none d-md-table-cell" style="width:25%">Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="AddUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <form id="createUserForm" class="needs-validation" novalidate="" autocomplete="off">
+                            <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input id="username" type="text" class="form-control" placeholder="Username" required>
+                                <div class="invalid-feedback">
+                                    Username is Required
+                                  </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input id="password" type="password" class="form-control" placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Password is Required
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Confirm Password</label>
+                                <input id="confirmPassword" type="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input id="fullName" type="text" class="form-control" placeholder="Full Name" required>
+                                <div class="invalid-feedback">
+                                    Full Name is Required
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Role</label>
+                                <select id="role" class="form-control mb-3" required>
+                                    <option value="" selected="">Please Select</option>
+                                    <option value="admin">Administrator</option>
+                                    <option value="user">User</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Role is Required
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Group</label>
+                                <select id="group" class="form-control mb-3" required>
+                                    <option value="" selected="">Please Select</option>
+                                    <option value="fullAccess">Full Access</option>
+                                    <option value="partialAccess">Partial Access</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Group is Required
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

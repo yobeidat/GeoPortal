@@ -1,0 +1,5 @@
+﻿Severity,Longitude,Latitude,AccidentID,CausedBy,Date
+Severe,54.367384,24.464461,1,Ahmad,1/1/20
+Moderate,54.364183,24.464545,2,Mohammad,2/1/20
+Minor,54.361739,24.461293,3,Osama,3/1/20
+Death,54.368072,24.467979,4,Akram,4/1/20
